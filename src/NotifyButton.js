@@ -23,7 +23,7 @@ const NotifyButton = () => {
 
     const sendTokenToServer = async (token) => {
         try {
-            const response = await axios.post('http://localhost:3200/send', { fcmToken: token });
+            const response = await axios.post('https://notify-server-1.onrender.com/send', { fcmToken: token });
             console.log('Server response:', response.data);
         } catch (error) {
             console.error('Error sending token to server:', error);
